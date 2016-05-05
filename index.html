@@ -228,72 +228,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="首次踏入github-hexo搭建的博客世界"><a href="#首次踏入github-hexo搭建的博客世界" class="headerlink" title="首次踏入github + hexo搭建的博客世界"></a>首次踏入github + hexo搭建的博客世界</h1><pre><code>搭建的过程还是有一些坎坷的，主要原因除了自己太菜还是自己太菜;想想过程还是挺简单的,
-按照各路前辈的引路还是能够很快搭建成功的,可惜过程中还是免不了出现各种小错误,报出各种的error！！！
-</code></pre><h2 id="简述搭建的过程-参考hifo"><a href="#简述搭建的过程-参考hifo" class="headerlink" title="简述搭建的过程(参考hifo)"></a>简述搭建的过程(参考<a href="http://blog.csdn.net/jzooo/article/details/46781805" target="_blank" rel="external">hifo</a>)</h2><p>   1.安装软件<br>     (1) 下载安装Git<br>     (2) 下载安装Node.js<br>     (3) 验证是否安装成功<br>            git –version<br>            node -v<br>            npm -v</p>
-<ol>
-<li>注册登录GitHub,配置GitHub<br>  (1) 一路默然,到最后按默认点击“Finish sign up”<pre><code>!(/img/a.png)
-</code></pre>  (2) 点击”New repository”，新建一个版本仓库<pre><code>!(/img/b.png)
-</code></pre>  (3) 输入Repository name:yourname.github.io(这就是你博客的域名了) <pre><code>!(/img/c.png)
-!(/img/d.png)
-</code></pre></li>
-<li>启用GitHub Page<br>  (1) 点击右边的“Setting”菜单进入设置,点击”Launch automatic page generator”<pre><code>!(/img/3.1.png)
-</code></pre>  (2) 点击底部的”Continue to layouts” <pre><code>!(/img/3.2.png)
-</code></pre>  (3) 最后点击”Publish page”,发布github默认生成的一个静态站点<pre><code>!(/img/3.3.png) 
-</code></pre>  (4) 验证邮箱 - 点击个人设置 <pre><code>!(/img/3.4.png) 
-</code></pre>  (5) 点击”Send verification Email”发送验证邮件 <pre><code>!(/img/3.5.png) 
-</code></pre>  (6) 进入你的邮箱，查收验证邮件进行验证就可以了</li>
-<li>安装Hexo<br>hexo是基于node.js的静态博客，官网也是搭建在GitHub上<br>  (1)  在电脑上新建一个blog文件夹,该文件夹用于存放你的博客文件,然后右键单击选择“Git Bash”<br>  (2)  安装hexo,可以使用淘宝的npm镜像,输入一下命令;<pre><code>&quot;$ npm install -g cnpm --registry=https://registry.npm.taobao.org&quot;
-</code></pre>  (3)  使用淘宝NPM安装Hexo<pre><code>&quot;$ cnpm install -g hexo-cli&quot;
- 继续输入以下命令
-&quot;$ cnpm install hexo --save&quot;
-查看是否安装成功&quot;$ hexo -v&quot;
-</code></pre>  (4)  本地运行hexo<pre><code>$ hexo init
-安装生成器
-$ cnpm install
-</code></pre>至此执行 $ hexo server 打开浏览器localhost:4000  一路顺畅没有报错的话 应该是可以看到本地的博客<br>一般hexo命令<br>hexo new”postName” #新建文章<br>hexo new page”pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #将.deploy目录部署到GitHub<br>hexo help # 查看帮助<br>hexo version #查看Hexo的版本</li>
-<li><p>管理博客<br>  (1)配置编辑 _config.yml 文件<br>  `# Hexo Configuration</p>
-<h2 id="Docs-https-hexo-io-docs-configuration-html"><a href="#Docs-https-hexo-io-docs-configuration-html" class="headerlink" title="Docs: https://hexo.io/docs/configuration.html"></a>Docs: <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">https://hexo.io/docs/configuration.html</a></h2><h2 id="Source-https-github-com-hexojs-hexo"><a href="#Source-https-github-com-hexojs-hexo" class="headerlink" title="Source: https://github.com/hexojs/hexo/"></a>Source: <a href="https://github.com/hexojs/hexo/" target="_blank" rel="external">https://github.com/hexojs/hexo/</a></h2><h1 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h1><p>  title: Manna(迦南美地)<br>  subtitle: turning your ear to wisdom and applying your heart to understanding<br>  description: 侧耳听智慧，专心求聪明<br>  author: 鹅肝儿<br>  email: leona_lily@163.com<br>  language: zh-CN<br>  timezone:</p>
-<h1 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h1><h2 id="If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child‘-and-root-as-‘-child-‘"><a href="#If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child‘-and-root-as-‘-child-‘" class="headerlink" title="If your site is put in a subdirectory, set url as ‘http://yoursite.com/child‘ and root as ‘/child/‘"></a>If your site is put in a subdirectory, set url as ‘<a href="http://yoursite.com/child" target="_blank" rel="external">http://yoursite.com/child</a>‘ and root as ‘/child/‘</h2><p>  url: <a href="http://lmanna.github.io/">http://lmanna.github.io/</a><br>  root: /<br>  permalink: :year/:month/:day/:title/<br>  permalink_defaults:</p>
-<h1 id="Directory"><a href="#Directory" class="headerlink" title="Directory"></a>Directory</h1><p>  source_dir: source<br>  public_dir: public<br>  tag_dir: tags<br>  archive_dir: archives<br>  category_dir: categories<br>  code_dir: downloads/code<br>  i18n_dir: :lang<br>  skip_render:</p>
-<h1 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h1><p>  new_post_name: :title.md # File name of new posts<br>  default_layout: post<br>  titlecase: false # Transform title into titlecase<br>  external_link: true # Open external links in new tab<br>  filename_case: 0<br>  render_drafts: false<br>  post_asset_folder: false<br>  relative_link: false<br>  future: true<br>  highlight:</p>
-<pre><code>enable: true
-line_number: true
-auto_detect: false
-tab_replace:
-</code></pre><h1 id="Category-amp-Tag"><a href="#Category-amp-Tag" class="headerlink" title="Category &amp; Tag"></a>Category &amp; Tag</h1><p>  default_category: uncategorized<br>  category_map:<br>  tag_map:</p>
-<h1 id="Date-Time-format"><a href="#Date-Time-format" class="headerlink" title="Date / Time format"></a>Date / Time format</h1><h2 id="Hexo-uses-Moment-js-to-parse-and-display-date"><a href="#Hexo-uses-Moment-js-to-parse-and-display-date" class="headerlink" title="Hexo uses Moment.js to parse and display date"></a>Hexo uses Moment.js to parse and display date</h2><h2 id="You-can-customize-the-date-format-as-defined-in"><a href="#You-can-customize-the-date-format-as-defined-in" class="headerlink" title="You can customize the date format as defined in"></a>You can customize the date format as defined in</h2><h2 id="http-momentjs-com-docs-displaying-format"><a href="#http-momentjs-com-docs-displaying-format" class="headerlink" title="http://momentjs.com/docs/#/displaying/format/"></a><a href="http://momentjs.com/docs/#/displaying/format/" target="_blank" rel="external">http://momentjs.com/docs/#/displaying/format/</a></h2><p>  date_format: YYYY-MM-DD<br>  time_format: HH:mm:ss</p>
-<h1 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h1><h2 id="Set-per-page-to-0-to-disable-pagination"><a href="#Set-per-page-to-0-to-disable-pagination" class="headerlink" title="Set per_page to 0 to disable pagination"></a>Set per_page to 0 to disable pagination</h2><p>  per_page: 10<br>  pagination_dir: page</p>
-<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h1><h2 id="Plugins-https-hexo-io-plugins"><a href="#Plugins-https-hexo-io-plugins" class="headerlink" title="Plugins: https://hexo.io/plugins/"></a>Plugins: <a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></h2><h2 id="Themes-https-hexo-io-themes"><a href="#Themes-https-hexo-io-themes" class="headerlink" title="Themes: https://hexo.io/themes/"></a>Themes: <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></h2><p>  theme: yilia</p>
-<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></h2><p>  deploy:</p>
-<pre><code>type: git
-repository: git@gitPrivate:LManna/LManna.github.io.git #部署的仓库的SSH
-branch: master&apos;
-</code></pre></li>
-</ol>
-<h2 id="安装过程中遇见的问题总结"><a href="#安装过程中遇见的问题总结" class="headerlink" title="安装过程中遇见的问题总结"></a>安装过程中遇见的问题总结</h2><p>1.主要是在_config.yml配置文件中的最后环节仓库地址：repository后填写http地址还是SSH地址;<br>一般当填写http对应的仓库地址,每次提交的过程都会输入用户名和地址,所以更多的人选择SSH秘钥的形式;<br>我最后选择SSH秘钥的形式原因很简单：http地址的格式一直在报错(SSH也在报错,最后还是选择了SSH方式);<br>简述过程<br>1.1 配置Git(工作中已经有了一个Git,所以需要在配置出一个专门用来个人使用)<br>    1.ssh-keygen -t rsa -C “new email”<br>    注：首次创建仓库的时候一般我们默认直接敲回车就好，默认生成id_rsa和id_rsa.pub,但是当你本地已经有了一个git仓库,直接敲回车，会覆盖你之前仓库的配置;所以这一步我们需要重新创建第二个文件来存放仓库的秘钥,比如id_rsa_private;<br>    之后他会生成两个文件,id_rsa_private和id_rsa_private.pub;而id_rsa_private.pub里面存放的就是当前邮箱对应仓库的<br>    秘钥地址;<br>    2.配置~/.ssh/config文件;没有的话自己创建一个也行;<br>    ‘# 该文件用于配置公司对应的服务器</p>
-<pre><code> # Default github user()
-Host github.com
-HostName github.com
-PubkeyAuthentication yes
-PasswordAuthentication yes
-User git
-IdentityFile /.ssh/id_rsa
-
-# second user()
-# 个人github;
-Host gitPrivate
-HostName github.com
-PasswordAuthentication yes
-User git
-IdentityFile /.ssh/id_rsa_private&apos;
-默认走的是公司对应邮箱生成的秘钥的git仓库;
-测试配置文件是否正常工作  shh -T -v git@github.com
-3.执行ssh-agent让ssh识别新的私钥
-ssh-add ~/.ssh/id_rsa_private
-该命令如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent，可执行ssh-agent bash命令后再执行ssh-add命令。
-</code></pre>
+        <hr>
       
     </div>
     
@@ -310,6 +245,10 @@ ssh-add ~/.ssh/id_rsa_private
 	</div>
 
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/28/hexo-github/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -344,7 +283,7 @@ ssh-add ~/.ssh/id_rsa_private
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/28/First-Page-2014-4-28/">First Page /2014.4.28</a>
+      <a class="article-title" href="/2016/04/28/First-Page-2014-4-28/">First Page(成功搭建hexo博客第一天) /2016-4-28</a>
     </h1>
   
 
@@ -353,7 +292,18 @@ ssh-add ~/.ssh/id_rsa_private
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="走进hexo-git-博客"><a href="#走进hexo-git-博客" class="headerlink" title="走进hexo + git 博客"></a>走进hexo + git 博客</h2><p><strong>遗留问题记录如下</strong></p>
+<blockquote>
+<ul>
+<li>评论连接的是其他人的评论（优先级很高）</li>
+<li>图片问题还未解决（后期想清楚）<br>  三个方案：<br>  1.上传到hexo博客的image文件夹下，直接引用<br>  2.上传到git里面，然后引用线上地址<br>  3.传到网上转换成http地址，在引用；</li>
+<li>博客还不美观，分类也不明确(分类还是很重要的)</li>
+<li>markdown语法还不成熟，需要学习改进再实践</li>
+</ul>
+</blockquote>
+<hr>
+<p>优先处理上面的问题，然后开始正式写写博客吧，原来的开源中国里面的文章就不进行迁移了，访问开源中国地址（<a href="http://my.oschina.net/u/2328177/blog" target="_blank" rel="external">原博客</a>）</p>
+
       
     </div>
     
